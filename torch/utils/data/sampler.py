@@ -179,6 +179,7 @@ class RandomSampler(Sampler[int]):
             seed = int(torch.empty((), dtype=torch.int64).random_().item())
             generator = torch.Generator()
             generator.manual_seed(seed)
+            print(seed)
         else:
             generator = self.generator
 
